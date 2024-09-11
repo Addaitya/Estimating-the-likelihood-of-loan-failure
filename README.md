@@ -1,5 +1,5 @@
 # Estimating-the-likelihood-of-loan-failure
-This project prioritizes responsible lending practices. We aim to create a model that assists investors in identifying borrowers with a strong repayment history, promoting financial stability for both lenders and borrowers.
+This project prioritizes responsible lending practices. I aim to create a model that assists investors in identifying borrowers with a strong repayment history, promoting financial stability for both lenders and borrowers.
 
 ## Descritipon about the files in repo
 This repository contain a Jupyter notebooks and dataset csv file that follow a machine learning pipeline to estimate the likelihood of loan failure. The steps include:
@@ -14,15 +14,17 @@ This repository contain a Jupyter notebooks and dataset csv file that follow a m
 ## Data descrition
 The dataset used is from LendingClub.com, covering the period 2007-2010. It includes 14 features with around 9,000 examples.
 
+- The output labels of the dataset are imbalance.
+- There is weak relation between input features and output labels.
+
 
 ## Model descrition
 A Random Forest model was selected due to the low linear dependency of numerical features on the target and high correlation between categorical features and the target.
 
 ## Model analysis results 
 
-Based on the classification report and confusion matrix, the model demonstrates strong performance in identifying borrowers who repay their loans (class 0). It achieves high precision, recall, and F1-score for this class, reflecting accurate and consistent predictions for loan repayment.
-
-However, the model struggles significantly with identifying loan failures (class 1). Both precision and recall for this class are zero, indicating that the model fails to correctly classify any of the loan failures. This is further supported by the confusion matrix, where almost all loan failures are misclassified as successful repayments
+- The model provide the accuracy of about `69%`.
+- On analysing the confusion matrix, the model has a well balance between the label classes(i.e. it is not bias).
 
 ## Conclusion
 
